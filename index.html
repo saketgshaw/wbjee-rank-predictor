@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WBJEE 2026 Rank Predictor By FUTURE MINDS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>WBJEE 2026 Rank Predictor By FUTURE MINDS</h2>
+      <p class="desc">
+        Enter your marks and select paper level to predict your expected WBJEE rank.
+      </p>
+
+      <div class="input-box">
+        <label>Marks Out of 200</label>
+        <input type="number" id="marks" placeholder="Enter your marks" min="0" max="200">
+      </div>
+
+      <div class="input-box">
+        <label>Paper Level</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <button onclick="predictRank()">Predict Rank</button>
+
+      <div id="result" class="result"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
