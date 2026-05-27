@@ -104,9 +104,11 @@ button:hover{
   margin-top:8px;
 }
 footer{
+  width:100%;
   text-align:center;
-  margin-top:25px;
+  padding:18px 10px;
+  background:white;
   color:#6b7280;
   font-size:14px;
-  padding:15px 0;
+  border-top:1px solid #e5e7eb;
 }
