@@ -1,71 +1,46 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WBJEE 2026 Rank Predictor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="background">
-    <div class="bg-blob blob1"></div>
-    <div class="bg-blob blob2"></div>
-    <div class="bg-blob blob3"></div>
-  </div>
 
-  <main class="app">
-    <header class="header">
-      <div class="logo">WBJEE</div>
-      <h1>Rank Predictor <span class="muted">2026</span></h1>
-    </header>
+  <div class="container">
 
-    <section class="card glass" aria-labelledby="predict-heading">
-      <div class="card-grid">
-        <div class="card-left">
-          <h2 id="predict-heading">Predict your WBJEE rank</h2>
-          <p class="desc">Enter your expected marks and select the paper difficulty. This predictor gives an estimated rank range based on historical trends and expected 2026 competition levels.</p>
+    <div class="card">
+      <h2>WBJEE 2026 Rank Predictor</h2>
+      <p class="desc">
+        Enter your marks and select paper level to predict your expected WBJEE rank.
+      </p>
 
-          <div class="input-group">
-            <label for="marks">Marks (out of 200)</label>
-            <input type="number" id="marks" placeholder="e.g. 120" min="0" max="200" />
-          </div>
-
-          <div class="input-group">
-            <label for="difficulty">Paper Level</label>
-            <select id="difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium" selected>Medium</option>
-              <option value="hard">Hard</option>
-            </select>
-          </div>
-
-          <div class="actions">
-            <button id="predictBtn">Predict Rank</button>
-            <button id="clearBtn" class="ghost">Clear</button>
-          </div>
-        </div>
-
-        <div class="card-right">
-          <div id="result" class="result" aria-live="polite">
-            <div class="placeholder">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v6"></path>
-                <path d="M5 11h14"></path>
-                <path d="M8 22h8"></path>
-              </svg>
-              <p>Predicted range will appear here</p>
-            </div>
-          </div>
-        </div>
+      <div class="input-box">
+        <label>Marks Out of 200</label>
+        <input type="number" id="marks" placeholder="Enter your marks" min="0" max="200">
       </div>
 
-      <p class="footnote">Based on previous years marks vs rank analysis and expected WBJEE 2026 competition level. Results are estimates — treat them as indicative, not definitive.</p>
-    </section>
+      <div class="input-box">
+        <label>Paper Level</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
 
-    <footer class="site-footer">Made by Saket Gobindam Shaw</footer>
-  </main>
+      <button onclick="predictRank()">Predict Rank</button>
+
+      <div id="result" class="result"></div>
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
+  <footer>
+  Made by Saket Gobindam Shaw
+</footer>
 </html>
